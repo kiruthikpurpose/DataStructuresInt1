@@ -1,0 +1,116 @@
+Linked Lists Overview
+
+Linked lists are a type of data structure used to store a collection of elements. Unlike arrays, linked lists are dynamic and can grow or shrink in size as needed. Each element in a linked list is contained in a node, which has two components:
+1. Data: The value or information to be stored.
+2. Pointer/Reference: A reference to the next node in the sequence (or previous node, depending on the type of linked list).
+
+Advantages of Linked Lists:
+1. Dynamic Size: Can easily grow or shrink in size, as nodes are dynamically allocated.
+2. Ease of Insertion/Deletion: Insertion and deletion of nodes are more efficient, especially when compared to arrays, as they do not require shifting of elements.
+
+Disadvantages of Linked Lists:
+1. Memory Overhead: Each node requires extra memory for the pointer/reference.
+2. No Direct Access: Elements must be accessed sequentially, which can be less efficient than direct indexing.
+
+Types of Linked Lists:
+
+Singly Linked List
+
+Basic Structure: Each node points to the next node in the sequence.
+
+Insertion at Start:
+1. Create a new node.
+2. Set the new node’s next reference to the current head.
+3. Update the head to the new node.
+
+Insertion at End:
+1. Create a new node.
+2. Traverse to the end of the list.
+3. Set the last node’s next reference to the new node.
+
+Insertion at Middle:
+1. Create a new node.
+2. Traverse to the desired position.
+3. Adjust the pointers of the previous node and the new node to insert it in the middle.
+
+Deletion at Start:
+1. Update the head to the next node in the list.
+2. Remove the reference to the old head node.
+
+Deletion at End:
+1. Traverse to the second-to-last node.
+2. Update its next reference to None.
+
+Deletion at Middle:
+1. Traverse to the node before the one to be deleted.
+2. Adjust the pointer of this node to skip the node being deleted.
+
+Doubly Linked List
+
+Basic Structure: Each node points to both the next and previous nodes.
+
+Insertion at Start:
+1. Create a new node.
+2. Set the new node’s next reference to the current head.
+3. Update the previous reference of the current head to the new node.
+4. Update the head to the new node.
+
+Insertion at End:
+1. Create a new node.
+2. Traverse to the end of the list.
+3. Update the last node’s next reference to the new node.
+4. Set the new node’s previous reference to the last node.
+
+Insertion at Middle:
+1. Create a new node.
+2. Traverse to the desired position.
+3. Adjust the pointers of the previous and next nodes to include the new node.
+
+Deletion at Start:
+1. Update the head to the next node.
+2. Set the new head’s previous reference to None.
+
+Deletion at End:
+1. Traverse to the second-to-last node.
+2. Set its next reference to None.
+
+Deletion at Middle:
+1. Traverse to the node before the one to be deleted.
+2. Adjust the pointers of the adjacent nodes to bypass the deleted node.
+
+Circular Singly Linked List
+
+Basic Structure: The last node points back to the head, forming a circle.
+
+Insertion at Start:
+1. Create a new node.
+2. Set the new node’s next reference to the current head.
+3. Traverse to the last node.
+4. Set the last node’s next reference to the new node.
+5. Update the head to the new node.
+
+Insertion at End:
+1. Create a new node.
+2. Traverse to the last node.
+3. Set the last node’s next reference to the new node.
+4. Set the new node’s next reference to the head.
+
+Insertion at Middle:
+1. Create a new node.
+2. Traverse to the desired position.
+3. Adjust the pointers to insert the new node in the circle.
+
+Deletion at Start:
+1. Update the head to the next node.
+2. Traverse to the last node.
+3. Update the last node’s next reference to the new head.
+
+Deletion at End:
+1. Traverse to the second-to-last node.
+2. Set its next reference to the head.
+
+Deletion at Middle:
+1. Traverse to the node before the one to be deleted.
+2. Adjust the pointers to bypass the deleted node.
+
+Each type of linked list has its specific use cases, advantages, and drawbacks, depending on the needs of the application.
